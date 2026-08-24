@@ -54,8 +54,8 @@ const FeatureBaconMeter = ({ groceryList }) => {
 
   return (
     <div className="relative mb-8 mt-4">
-      <div className="flex items-center justify-between mb-1">
-        <span className="text-sm font-semibold text-black dark:text-white">Bacon Meter</span>
+      <div className="flex items-center justify-between mb-4">
+        <span className="font-display text-sm font-semibold text-black dark:text-white">Bacon Meter</span>
         <span className="text-sm font-semibold text-amber-800 dark:text-amber-400">
           {Math.round(fillPercent)}%
         </span>

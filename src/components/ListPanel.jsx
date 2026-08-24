@@ -3,7 +3,6 @@ import { Trash2 } from "lucide-react";
 // import components
 import ListItemCard from "./ListItemCard";
 import ListAddInput from "./ListAddInput";
-import FeatureBaconMeter from "./FeatureBaconMeter";
 import FeatureExportControls from "./FeatureExportControls";
 
 const ListPanel = ({ groceryList, setGroceryList, handleAdd }) => {
@@ -19,8 +18,6 @@ const ListPanel = ({ groceryList, setGroceryList, handleAdd }) => {
 
   return (
     <div className="p-4">
-      <FeatureBaconMeter groceryList={groceryList} />
-
       <div className="flex items-center justify-between mb-2">
         <h2 className="font-semibold text-black dark:text-white">Your List</h2>
         {groceryList.length > 0 && (

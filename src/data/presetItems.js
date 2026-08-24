@@ -28,18 +28,18 @@ const presetCategories = [
     items: ["Milk", "Cheddar Cheese", "Mozzarella", "Butter", "Greek Yogurt", "Sour Cream", "Cream Cheese", "Cottage Cheese", "Heavy Cream", "Parmesan", "Half and Half", "Whipped Cream", "Buttermilk", "Ricotta", "Yogurt", "Feta Cheese", "Swiss Cheese", "Ice Cream", "Condensed Milk", "Goat Cheese"]
   },
   {
-    category: "Pantry Items",
+    category: "Pantry",
     icon: ShelvingUnit,
     items: ["Olive Oil", "Salt", "Black Pepper", "Sugar", "Flour", "Baking Soda", "Baking Powder", "Vanilla Extract", "Soy Sauce", "Pasta", "Canned Tomatoes", "Chicken Broth", "Honey", "Vinegar", "Peanut Butter", "Canned Beans", "Cereal", "Bread Crumbs", "Ketchup", "Mustard"]
   },
   {
-    category: "Household Items",
+    category: "Household",
     icon: SprayCan,
     items: ["Dish Soap", "Laundry Detergent", "All-Purpose Cleaner", "Paper Towels", "Sponges", "Glass Cleaner", "Bleach", "Trash Bags", "Toilet Bowl Cleaner", "Disinfecting Wipes", "Fabric Softener", "Dishwasher Detergent", "Rubber Gloves", "Air Freshener", "Floor Cleaner", "Scrub Brush", "Hand Soap", "Stain Remover", "Furniture Polish", "Microfiber Cloths"]
   }
   ,
   {
-    category: "Personal Care Items",
+    category: "Personal Care",
     icon: ShowerHead,
     items: ["Toothpaste", "Toothbrush", "Body Soap", "Shampoo", "Conditioner", "Deodorant", "Razors", "Shaving Cream", "Mouthwash", "Dental Floss", "Body Wash", "Lotion", "Hand Sanitizer", "Cotton Swabs", "Feminine Hygiene Products", "Toilet Paper", "Facial Tissue", "Sunscreen", "Hair Brush", "Nail Clippers"]
   }

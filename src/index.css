@@ -1,2 +1,11 @@
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-display: "Bungee", sans-serif;
+  --font-body: "Nunito Sans", sans-serif;
+}
+
+body {
+  font-family: var(--font-body);
+}
