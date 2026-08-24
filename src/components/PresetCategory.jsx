@@ -1,17 +1,14 @@
 // import dependancies
-import { useState } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
 // import components
 import PresetItemCard from "./PresetItemCard";
 
-const PresetCategory = ({ category, icon: Icon, items, onAdd }) => {
-  const [isOpen, setIsOpen] = useState(true);
-
+const PresetCategory = ({ category, icon: Icon, items, onAdd, isOpen, onToggle }) => {
   return (
     <div className="mb-6">
       <button
-        onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center justify-between w-full gap-2 mb-2"
+        onClick={onToggle}
+        className="flex items-center justify-between w-full gap-2 mb-2 text-black dark:text-white"
       >
         <div className="flex items-center gap-2">
           <Icon size={18} />

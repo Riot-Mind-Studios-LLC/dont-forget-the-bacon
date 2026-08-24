@@ -1,4 +1,4 @@
-import { Carrot, Apple, Wheat, Beef, Milk } from "lucide-react";
+import { Carrot, Apple, Wheat, Beef, Milk, ShelvingUnit } from "lucide-react";
 
 const presetCategories = [
   {
@@ -26,6 +26,11 @@ const presetCategories = [
     category: "Dairy",
     icon: Milk,
     items: ["Milk", "Cheddar Cheese", "Mozzarella", "Butter", "Greek Yogurt", "Sour Cream", "Cream Cheese", "Cottage Cheese", "Heavy Cream", "Parmesan", "Half and Half", "Whipped Cream", "Buttermilk", "Ricotta", "Yogurt", "Feta Cheese", "Swiss Cheese", "Ice Cream", "Condensed Milk", "Goat Cheese"]
+  },
+  {
+    category: "Pantry",
+    icon: ShelvingUnit,
+    items: ["Olive Oil", "Salt", "Black Pepper", "Sugar", "Flour", "Baking Soda", "Baking Powder", "Vanilla Extract", "Soy Sauce", "Pasta", "Canned Tomatoes", "Chicken Broth", "Honey", "Vinegar", "Peanut Butter", "Canned Beans", "Cereal", "Bread Crumbs", "Ketchup", "Mustard"]
   }
 ];
 

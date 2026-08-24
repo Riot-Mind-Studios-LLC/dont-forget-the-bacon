@@ -1,6 +1,7 @@
 // import dependancies
 // import components
 import ListItemCard from "./ListItemCard";
+import FeatureExportControls from "./FeatureExportControls";
 
 const ListPanel = ({ groceryList, setGroceryList }) => {
   const handleRemove = (name) => {
@@ -9,7 +10,7 @@ const ListPanel = ({ groceryList, setGroceryList }) => {
 
   return (
     <div className="p-4">
-      <h2 className="font-semibold mb-2">Your List</h2>
+      <h2 className="font-semibold mb-2 text-black dark:text-white">Your List</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
         {groceryList.map((item) => (
           <ListItemCard
@@ -20,6 +21,8 @@ const ListPanel = ({ groceryList, setGroceryList }) => {
           />
         ))}
       </div>
+
+      <FeatureExportControls groceryList={groceryList} />
     </div>
   )
 }
