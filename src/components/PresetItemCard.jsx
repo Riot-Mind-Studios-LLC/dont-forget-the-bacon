@@ -1,10 +1,10 @@
 // import dependancies
 // import components
 
-const PresetItemCard = ({ name, onAdd }) => {
+const PresetItemCard = ({ name, icon: Icon, onAdd }) => {
   return (
     <button
-      onClick={() => onAdd(name)}
+      onClick={() => onAdd({ name, icon: Icon })}
       className="w-full text-left p-2 mb-2 rounded-md bg-white hover:bg-amber-100 transition-colors"
     >
       {name}
