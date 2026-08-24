@@ -7,7 +7,7 @@ const LayoutDashboard = ({ groceryList, setGroceryList }) => {
   return (
     <div className="min-h-screen">
       <header>Header</header>
-      <main className="grid grid-cols-[280px_1fr]">
+      <main className="grid grid-cols-1 md:grid-cols-[280px_1fr]">
 
         {/* preset panel */}
         <PresetPanel groceryList={groceryList} setGroceryList={setGroceryList} />
