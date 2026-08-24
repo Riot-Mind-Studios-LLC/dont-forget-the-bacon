@@ -1,20 +1,15 @@
 // import assets
-// import projectLogo from './assets/logo.svg' // update
-
-
+// import components
+import LayoutDashboard from "./components/LayoutDashboard";
 
 function App() {
-  // add javascript
 
   return (
-    // add jsx
-
     <>
-        {/* test div */}
-        <div className="text-3xl font-bold text-blue-600">Running test content - delete before dev</div>
-
+     <LayoutDashboard />
     </>
   )
+  
 }
 
-export default App
+export default App;
