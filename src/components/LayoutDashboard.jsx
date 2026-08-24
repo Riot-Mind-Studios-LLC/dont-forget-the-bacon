@@ -3,12 +3,23 @@
 import PresetPanel from "./PresetPanel";
 import ListPanel from "./ListPanel";
 import FeatureThemeToggle from "./FeatureThemeToggle";
+import FeatureToast from "./FeatureToast";
 import headerBanner from "../assets/header-banner.jpg";
 import baconMarker from "../assets/bacon-marker.svg";
 
-const LayoutDashboard = ({ groceryList, setGroceryList, handleAdd, isDarkMode, setIsDarkMode }) => {
+const LayoutDashboard = ({
+  groceryList,
+  setGroceryList,
+  handleAdd,
+  isDarkMode,
+  setIsDarkMode,
+  toastMessage,
+  setToastMessage,
+}) => {
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900 text-black dark:text-white">
+      <FeatureToast message={toastMessage} onClear={() => setToastMessage("")} />
+
       <header
         className="relative w-full bg-cover bg-center"
         style={{ backgroundImage: `url(${headerBanner})` }}
