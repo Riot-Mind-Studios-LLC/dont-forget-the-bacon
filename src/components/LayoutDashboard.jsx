@@ -1,5 +1,6 @@
 // import dependancies
 // import components
+import PresetPanel from "./PresetPanel";
 
 const LayoutDashboard = () => {
   return (
@@ -8,7 +9,7 @@ const LayoutDashboard = () => {
       <main className="grid grid-cols-[280px_1fr]">
 
         {/* preset panel */}
-        <div className="bg-amber-500 w-full h-full">Preset panel</div>
+        <PresetPanel />
 
         {/* list panel */}
         <div className="bg-amber-700 w-full h-full">List panel</div>
