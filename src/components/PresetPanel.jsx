@@ -5,15 +5,8 @@ import { CiBacon } from "react-icons/ci";
 // import components
 import PresetCategory from "./PresetCategory";
 
-const PresetPanel = ({ groceryList, setGroceryList }) => {
+const PresetPanel = ({ handleAdd }) => {
   const [openCategory, setOpenCategory] = useState(null);
-
-  const handleAdd = (newItem) => {
-    const alreadyExists = groceryList.some((item) => item.name === newItem.name);
-    if (!alreadyExists) {
-      setGroceryList([...groceryList, newItem]);
-    }
-  }
 
   const handleToggle = (category) => {
     setOpenCategory(openCategory === category ? null : category);

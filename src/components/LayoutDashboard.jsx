@@ -4,7 +4,7 @@ import PresetPanel from "./PresetPanel";
 import ListPanel from "./ListPanel";
 import FeatureThemeToggle from "./FeatureThemeToggle";
 
-const LayoutDashboard = ({ groceryList, setGroceryList, isDarkMode, setIsDarkMode }) => {
+const LayoutDashboard = ({ groceryList, setGroceryList, handleAdd, isDarkMode, setIsDarkMode }) => {
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900 text-black dark:text-white">
       <header className="flex items-center justify-between p-4">
@@ -14,10 +14,10 @@ const LayoutDashboard = ({ groceryList, setGroceryList, isDarkMode, setIsDarkMod
       <main className="grid grid-cols-1 md:grid-cols-[280px_1fr]">
 
         {/* preset panel */}
-        <PresetPanel groceryList={groceryList} setGroceryList={setGroceryList} />
+        <PresetPanel groceryList={groceryList} setGroceryList={setGroceryList} handleAdd={handleAdd} />
 
         {/* list panel */}
-        <ListPanel groceryList={groceryList} setGroceryList={setGroceryList} />
+        <ListPanel groceryList={groceryList} setGroceryList={setGroceryList} handleAdd={handleAdd} />
 
       </main>
     </div>
