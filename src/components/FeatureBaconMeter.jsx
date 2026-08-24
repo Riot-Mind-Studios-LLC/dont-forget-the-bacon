@@ -11,6 +11,7 @@ const CAP_PERCENT = 90;
 const FeatureBaconMeter = ({ groceryList }) => {
   const barRef = useRef(null);
   const markerRef = useRef(null);
+  const prevPercentRef = useRef(0);
 
   const hasBacon = groceryList.some((item) => item.name === "Bacon");
   const nonBaconCount = groceryList.filter((item) => item.name !== "Bacon").length;
@@ -18,19 +19,25 @@ const FeatureBaconMeter = ({ groceryList }) => {
   const rawPercent = Math.min((nonBaconCount / ITEM_TARGET) * CAP_PERCENT, CAP_PERCENT);
   const fillPercent = hasBacon ? 100 : rawPercent;
 
-  useGSAP(() => {
-    gsap.to(barRef.current, {
-      width: `${fillPercent}%`,
-      duration: 0.6,
-      ease: "power2.inOut",
-    });
+    useGSAP(() => {
+    const prevPercent = prevPercentRef.current;
+    const wasAlreadyCapped = prevPercent >= CAP_PERCENT && !hasBacon;
+    const stillCapped = fillPercent >= CAP_PERCENT && !hasBacon;
 
-    gsap.to(markerRef.current, {
-      left: `${fillPercent}%`,
-      duration: 0.6,
-      ease: "power2.inOut",
-    });
-  }, [fillPercent]);
+    const tl = gsap.timeline();
+
+    if (wasAlreadyCapped && stillCapped) {
+      tl.to(barRef.current, { width: "80%", duration: 0.3, ease: "power2.out" })
+        .to(barRef.current, { width: `${CAP_PERCENT}%`, duration: 0.5, ease: "power2.inOut" });
+      tl.to(markerRef.current, { left: "80%", duration: 0.3, ease: "power2.out" }, 0)
+        .to(markerRef.current, { left: `${CAP_PERCENT}%`, duration: 0.5, ease: "power2.inOut" });
+    } else {
+      tl.to(barRef.current, { width: `${fillPercent}%`, duration: 0.6, ease: "power2.inOut" });
+      tl.to(markerRef.current, { left: `${fillPercent}%`, duration: 0.6, ease: "power2.inOut" }, 0);
+    }
+
+    prevPercentRef.current = fillPercent;
+  }, [nonBaconCount, hasBacon]);
 
   return (
     <div className="relative mb-8 mt-4">
