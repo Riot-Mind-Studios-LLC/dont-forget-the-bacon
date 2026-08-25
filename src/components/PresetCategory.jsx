@@ -8,7 +8,7 @@ const PresetCategory = ({ category, icon: Icon, items, onAdd, isOpen, onToggle }
     <div className="mb-6">
       <button
         onClick={onToggle}
-        className="flex items-center justify-between w-full gap-2 mb-2 text-black dark:text-white"
+        className="flex items-center justify-between w-full gap-2 mb-2 pb-3 border-b border-amber-500 text-black dark:text-white"
       >
         <div className="flex items-center gap-2">
           <Icon size={18} />

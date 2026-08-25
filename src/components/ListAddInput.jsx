@@ -24,7 +24,7 @@ const ListAddInput = ({ onAdd }) => {
       />
       <button
         type="submit"
-        className="flex items-center justify-center px-3 rounded-md bg-amber-800 text-white hover:bg-amber-900 transition-colors"
+        className="flex items-center justify-center px-3 rounded-full bg-amber-800 text-white hover:bg-amber-900 transition-colors"
       >
         <Plus size={18} />
       </button>

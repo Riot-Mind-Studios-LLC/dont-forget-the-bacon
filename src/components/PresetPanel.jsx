@@ -16,10 +16,10 @@ const PresetPanel = ({ handleAdd }) => {
     <div className="p-4">
       <button
         onClick={() => handleAdd({ name: "Bacon", icon: CiBacon })}
-        className="w-full flex items-center justify-center gap-2 p-3 mb-6 rounded-md bg-amber-800 text-white font-semibold hover:bg-amber-900 transition-colors"
+        className="w-full flex items-center justify-center gap-2 p-3 mb-6 rounded-full bg-amber-800 text-white font-semibold hover:bg-amber-900 transition-colors"
       >
         <CiBacon size={20} />
-        Don't Forget The Bacon
+        Add The Bacon!
       </button>
 
       {presetCategories.map((entry) => (

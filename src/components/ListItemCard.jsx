@@ -4,7 +4,7 @@ import { X } from "lucide-react";
 
 const ListItemCard = ({ name, icon: Icon, onRemove }) => {
   return (
-    <div className="flex items-center justify-between p-2 rounded-md bg-white dark:bg-gray-800 text-black dark:text-white">
+    <div className="flex items-center justify-between p-2 rounded-md border border-gray-200 dark:border-transparent bg-white dark:bg-gray-800 text-black dark:text-white">
       <div className="flex items-center gap-2">
         <Icon size={16} />
         <span>{name}</span>

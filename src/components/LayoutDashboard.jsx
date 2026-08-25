@@ -21,6 +21,10 @@ const LayoutDashboard = ({
     <div className="min-h-screen bg-white dark:bg-gray-900 text-black dark:text-white">
       <FeatureToast message={toastMessage} onClear={() => setToastMessage("")} />
 
+      <div className="fixed top-4 right-4 z-40">
+        <FeatureThemeToggle isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
+      </div>
+
       <header
         className="relative w-full bg-cover bg-center"
         style={{ backgroundImage: `url(${headerBanner})` }}
@@ -28,22 +32,18 @@ const LayoutDashboard = ({
         <div className="absolute inset-0 bg-black/60" />
 
         <div className="relative z-10 px-4 py-10 md:py-16 text-center">
-          <div className="flex justify-end mb-4">
-            <FeatureThemeToggle isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
-          </div>
-
           <div className="flex items-center justify-center gap-3 mb-2">
             <img src={baconMarker} alt="" className="w-12 h-12 md:w-16 md:h-16" />
             <h1 className="font-display text-3xl md:text-5xl font-bold text-white">
-              Don't Forget The Bacon
+              Don't Forget The Bacon!
             </h1>
           </div>
 
-          <p className="text-white/90 text-base md:text-lg mb-4">
+          <p className="text-white/90 font-semibold text-base md:text-lg mb-4">
             Your grocery list, minus the goldfish memory.
           </p>
           <p className="text-white/80 text-sm md:text-base max-w-xl mx-auto">
-            Tap a preset to add it, type your own, and hit the bacon button when you're really ready to shop.
+            Open grocery categories and tap an item to add to your list, add your own item, and share your list with family!
           </p>
         </div>
       </header>
